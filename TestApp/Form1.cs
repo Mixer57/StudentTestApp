@@ -60,12 +60,6 @@ namespace TestApp
                 $"Вы прошли тест: {comboBox1.Text}\n\nВаша оценка:  {Math.Round(scr, 0)} ({Math.Round(scr, 4)})\n\nПравильных ответов: {Math.Round(sum, 0)} из {cnt} ({Math.Round(prc, 3)}%){(wa != "" ? $"\n\nСписок неверных ответов:\n{wa.Trim()}" : "")}",
                 @"Тест пройден", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
-
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
-
         private void CheckEn(object sender, EventArgs e)
         {
             pictureBox1.Image = textBox1.Text.Split(' ').Length == 3 && textBox1.Text.Split(' ')[2].Length > 0
@@ -73,7 +67,6 @@ namespace TestApp
                     ? Properties.Resources.ppl_female
                     : Properties.Resources.ppl_male
                 : Properties.Resources.ppl_unk;
-
             button1.Enabled = textBox1.TextLength > 0 & textBox2.TextLength > 0 & comboBox1.SelectedIndex > -1;
         }
     }
