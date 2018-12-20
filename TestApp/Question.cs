@@ -10,6 +10,12 @@ namespace TestApp
 
     public class QuestionPack
     {
+        public QuestionPack()
+        {
+            Author = Title = Theme = Discipline = "";
+            Questions = new List<Question>();
+            TimeToTest = TimeToAnswer = 0;
+        }
         public string Author { get; set; }
         public string Title { get; set; }
         public string Discipline { get; set; }
